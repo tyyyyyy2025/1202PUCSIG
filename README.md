@@ -1,7 +1,7 @@
 # 1202PUCSIG
 
 # 数据介绍
-train数据集\n
+train数据集
 head部分
 order id
 ata(actual time of attival)=订单结束时间-乘客上车时间
