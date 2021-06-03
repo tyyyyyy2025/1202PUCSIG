@@ -44,8 +44,9 @@ link的选取并没有很直接的意义
 
 * 1.大方向：回归问题，数据有序列性-->LSTM建模
 
-[https://blog.csdn.net/yangwohenmai1/article/details/84873763]
+[]
 
-    但可能是由于数据没有明确的上下文依赖性，需要用到别的模型如CNN
-    
-* 2.
+https://blog.csdn.net/yangwohenmai1/article/details/84873763
+
+* 2.考虑邻域的影响，需要用到路网拓扑推知路况变化的传递（空间和时间）
+* 3.**模型的上限是特征**，思考可以进一步挖掘那些特征统计值
