@@ -1,4 +1,4 @@
-# 1202PUCSIG
+# GISCUP2021
 
 ## 数据介绍
 
@@ -7,18 +7,25 @@
 #### head部分
 
 * order id
-* ata(actual time of attival)=订单结束时间-乘客上车时间
+* ata(actual time of attival)=订单结束时间-乘客上车时间，单位为秒
 * distance
-* simple eta(estimated time of arrival)出发时刻平均通行时间加和，最后的结果至少应该比它好
+* simple eta(estimated time of arrival)**出发时刻**平均通行时间加和，最后的结果至少应该比它好
 * driver id
 * slice id出发时刻时间片id(每5分钟一个，24h循环)
 
 #### link部分
 
 * link id
+* link time**出发时刻**道路小段前10分钟的平均通行时间，基于历史统计，本身不具有预测作用
+* link ratio实际轨迹覆盖该小段的占比，除了首尾一定都是1，所以应该只有在处理首尾时间时有意义
+* link current status发单时刻该道路小段的路况状态。路况状态分为拥堵（3），缓行（2），畅通（1），未知（0）
+* link arrival status到达该小段时的路况状态，这个特征在test集中不存在，那么怎样去预估这个状态，靠路网的领域拓扑关系？
 
-* link time
+#### cross部分
 
-* link ratio
+* cross id不是一个数，link id1_link id2组成，且两个小段可能不相邻
+* cross time挖掘得到，粒度粗
 
-* 
+
+
+
